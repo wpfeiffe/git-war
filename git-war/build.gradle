@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    compile "org.springframework:spring-core:$springCoreVersion"
+    compile "org.springframework:spring-webmvc:$springCoreVersion"
+    compile "org.springframework:spring-web:$springCoreVersion"
+    compile "javax.servlet:jstl:1.2"
+    testCompile "junit:junit:$junitVersion"
+}
